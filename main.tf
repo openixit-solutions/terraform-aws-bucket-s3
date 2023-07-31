@@ -62,3 +62,12 @@ resource "aws_s3_bucket_cors_configuration" "this" {
     }
   }
 }
+
+resource "aws_s3_bucket_policy" "this" {
+  count = var.policy != null ? 1 : 0
+
+  bucket = aws_s3_bucket.this.id
+  policy = var.policy
+
+  depends_on = [aws_s3_bucket_public_access_block.this]
+}

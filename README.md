@@ -34,6 +34,7 @@ No modules.
 | <a name="input_ignore_public_acls"></a> [ignore_public_acls](#input\_ignore_public_acls) | Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to false | `bool` | `false` | no |
 | <a name="input_restrict_public_buckets"></a> [restrict_public_buckets](#input\_restrict_public_buckets) | Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to false | `bool` | `false` | no |
 | <a name="input_cors_rule"></a> [cors_rule](#input\_cors_rule) | List of maps containing rules for Cross-Origin Resource Sharing | `any` | `[]` | no |
+| <a name="input_policy"></a> [policy](#input\_policy) | (Optional) A valid bucket policy JSON document | `string` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Module custom tags | `map(string)` | `{}` | yes |
 
 ## Outputs
