@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "this" {
   bucket        = var.bucket_name
   force_destroy = var.force_destroy
 
-  tags = var.tags
+  tags = merge(var.tags, { Terraform = "true" })
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "this" {
